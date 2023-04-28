@@ -15,8 +15,8 @@ pipeline {
 
     stage('error') {
       steps {
-        sh '''sudo apt-get update
-sudo apt-get install docker.io
+        sh '''apt-get update
+apt-get install docker.io
 docker --version
 docker pull alexwhen/docker-2048
 docker run -d -p 5000:80 alexwhen/docker-2048'''
