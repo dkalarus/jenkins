@@ -13,5 +13,12 @@ pipeline {
       }
     }
 
+    stage('') {
+      steps {
+        sh '''docker pull alexwhen/docker-2048
+docker run -d -p 5000:80 alexwhen/docker-2048'''
+      }
+    }
+
   }
 }
